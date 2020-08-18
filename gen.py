@@ -2,7 +2,7 @@ import sys, os, getopt
 from core import generator
 
 def main(argv):
-    command = "gen.py -m <modID> -b <name> -t <wood>"
+    command = "gen.py -m <modID> -b <name> -t <template>"
 
     try:
         opts, args = getopt.getopt(argv, "hm:b:t:")
@@ -35,7 +35,7 @@ def main(argv):
     try:
         srcType
     except NameError:
-        print("well, you forget to set your source type")
+        print("well, you forget to set your source template")
         print(command)
         sys.exit(2)
 
