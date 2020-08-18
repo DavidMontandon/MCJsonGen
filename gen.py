@@ -49,10 +49,17 @@ def main(argv):
         sys.exit(2)
 
     destination_path = os.path.join(path, "gen")
-    destination_path = os.path.join(destination_path, srcType)
-
     if not os.path.exists(destination_path): 
          os.mkdir(destination_path)
+
+    destination_path = os.path.join(destination_path, srcType)
+    if not os.path.exists(destination_path): 
+         os.mkdir(destination_path)
+
+    destination_path = os.path.join(destination_path, blockName)
+    if not os.path.exists(destination_path): 
+         os.mkdir(destination_path)
+
 
     generator.Generator(source_path, destination_path, modID, blockName).generate()
 
