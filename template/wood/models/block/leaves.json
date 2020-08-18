@@ -1,0 +1,6 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "%MOD_ID%:blocks/%BLOCK%_leaves"
+    }
+}

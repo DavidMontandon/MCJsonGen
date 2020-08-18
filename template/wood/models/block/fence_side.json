@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_side",
+    "textures": {
+        "texture": "%MOD_ID%:blocks/%BLOCK%_planks"
+    }
+}

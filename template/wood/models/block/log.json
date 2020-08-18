@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "%MOD_ID%:blocks/%BLOCK%_log_top",
+        "side": "%MOD_ID%:blocks/%BLOCK%_log"
+    }
+}

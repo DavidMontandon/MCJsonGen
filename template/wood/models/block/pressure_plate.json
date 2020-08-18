@@ -1,0 +1,6 @@
+{
+    "parent": "block/pressure_plate_up",
+    "textures": {
+        "texture": "%MOD_ID%:blocks/%BLOCK%_planks"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/button",
+    "textures": {
+        "texture": "%MOD_ID%:blocks/%BLOCK%_planks"
+    }
+}
