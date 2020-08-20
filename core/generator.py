@@ -2,9 +2,8 @@ import os
 
 class Generator:
 
-    def __init__(self, source_path, destination_path, modID, blockName):
-        self.__modID = modID 
-        self.__blockName = blockName 
+    def __init__(self, source_path, destination_path, formated_keywords):
+        self.__keywords = formated_keywords 
         self.__source_path = source_path 
         self.__destination_path = destination_path 
 
@@ -22,7 +21,7 @@ class Generator:
                     os.mkdir(new_destination)
                 self.__crawl(new_source, new_destination)
             else:
-                new_destination = os.path.join(destination, self.__blockName + "_" + entry)
+                new_destination = os.path.join(destination, self.__keywords["%BLOCK%"] + "_" + entry)
                 self.__writeFile(new_source, new_destination)
 
 
@@ -37,33 +36,9 @@ class Generator:
         s = f.read()
         f.close
 
-        s = s.replace("%MOD_ID%", self.__modID)
-        s = s.replace("%BLOCK%", self.__blockName)
+        for k,v in self.__keywords.items():
+            s = s.replace(k, v)
 
         f  = open(destination, "w+") 
         f.write(s)
         f.close() 
-
-    def __createSign(self):
-        #BLOCKSTATE
-        self.__write("./template/blockstates/wall_sign.json", "./gen/blockstates/" + self.__blockName + "_wall_sign.json")
-
-    def __createButton(self):
-        #BLOCKSTATE
-        self.__write("./template/blockstates/button.json", "./gen/blockstates/" + self.__blockName + "_button.json")
-
-    def __createStairs(self):
-        #BLOCKSTATE
-        self.__write("./template/blockstates/stairs.json", "./gen/blockstates/" + self.__blockName + "_stairs.json")
-
-        #BLOCK_STAIRS_INNER        
-        self.__write("./template/models/block/stairs_inner.json", "./gen/models/block/" + self.__blockName + "_stairs_inner.json")
-
-        #BLOCK_STAIRS_OUTER
-        self.__write("./template/models/block/stairs_outer.json", "./gen/models/block/" + self.__blockName + "_stairs_outer.json")
-
-        #BLOCK_STAIRS
-        self.__write("./template/models/block/stairs.json", "./gen/models/block/" + self.__blockName + "_stairs.json")
-
-        #ITEM_STAIRS
-        self.__write("./template/models/item/stairs.json", "./gen/models/item/" + self.__blockName + "_stairs.json")

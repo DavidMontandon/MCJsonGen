@@ -1,0 +1,6 @@
+{
+	"modid":"mymod",
+	"keywords" : {		
+		"JAVA_CLASS" : "MyMod"
+	}
+}
