@@ -7,23 +7,28 @@ def main(argv):
     parser.add_argument("-m", "--modid", help="your modid, e.g. examplemod (if empty will be read in config.json)", type=str, required=False)
     parser.add_argument("-b", "--block", help="name of your block, e.g. dark_oak", type=str, required=True)
     parser.add_argument("-t", "--template", help="generation template (must be a folder in template folder), e.g. wood", type=str, required=True)
+    parser.add_argument("-p", "--push", help="push generation into mod ressource folder", type=bool, required=False)
+    parser.add_argument("-c", "--config", help="config file to read (default is config.json)", type=str, required=False)
     
     args = parser.parse_args()
 
     mod_ID = args.modid
     block_name = args.block
     template = args.template
+    config_file_name = args.config 
+    if config_file_name == None:
+        config_file_name = "config.json"
 
     path = os.path.dirname(os.path.realpath(__file__))
-    if os.path.isfile("./config.json"):
-        with open("config.json") as config_file:
+    if os.path.isfile(config_file_name):
+        with open(config_file_name) as config_file:
             data = json.load(config_file)
             if mod_ID == None:
                 mod_ID = data["modid"]
 
             keywords = data["keywords"]
     else:
-        print("config.json doesn't exists")
+        print(config_file_name + " doesn't exists")
         sys.exit(2)
 
     if mod_ID == None:

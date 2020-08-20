@@ -1,5 +1,13 @@
 {
 	"modid":"mymod",
+	"update_minecraft" : false,
+	"ressource_folder":"",
+	"mod_blockstates_folder":"/assets/%MODID%/blockstates/",
+	"mod_models_block_folder":"/assets/%MODID%/models/block/",
+	"mod_models_items_folder":"/assets/%MODID%/models/item/",
+	"mod_loot_tables_folder":"/data/%MODID%/loot_tables/blocks/",
+	"mod_recipes_folder":"/data/%MODID%/loot_tables/blocks/",
+	"mod_tags_blocks_folder":"/data/%MODID%/loot_tables/blocks/",
 	"keywords" : {		
 		"JAVA_CLASS" : "MyMod"
 	}
