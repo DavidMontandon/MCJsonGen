@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "%MOD_ID%:%BLOCK%_planks"
+    }
+  },
+  "result": {
+    "item": "%MOD_ID%:%BLOCK%_boat"
+  }
+}

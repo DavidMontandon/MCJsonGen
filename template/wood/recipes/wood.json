@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "%MOD_ID%:%BLOCK%_log"
+    }
+  },
+  "result": {
+    "item": "%MOD_ID%:%BLOCK%_wood",
+    "count": 3
+  }
+}

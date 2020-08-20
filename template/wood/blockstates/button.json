@@ -23,6 +23,6 @@
         "face=ceiling,facing=east,powered=true":  { "model": "%MOD_ID%:block/%BLOCK%_button_pressed", "x": 180, "y": 270 },
         "face=ceiling,facing=west,powered=true":  { "model": "%MOD_ID%:block/%BLOCK%_button_pressed", "x": 180, "y": 90 },
         "face=ceiling,facing=south,powered=true": { "model": "%MOD_ID%:block/%BLOCK%_button_pressed", "x": 180 },
-        "face=ceiling,facing=north,powered=true": { "model": "%MOD_ID%:block/%BLOCK%button_pressed", "x": 180, "y": 180 }
+        "face=ceiling,facing=north,powered=true": { "model": "%MOD_ID%:block/%BLOCK%_button_pressed", "x": 180, "y": 180 }
     }
 }

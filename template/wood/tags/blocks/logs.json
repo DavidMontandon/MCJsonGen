@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "%MOD_ID%:%BLOCK%_log",
+    "%MOD_ID%:%BLOCK%_wood",
+    "%MOD_ID%:stripped_%BLOCK%_log",
+    "%MOD_ID%:stripped_%BLOCK%_wood"
+  ]
+}
