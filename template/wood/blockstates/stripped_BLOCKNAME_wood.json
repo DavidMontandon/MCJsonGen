@@ -1,7 +1,7 @@
 {
     "variants": {
-        "axis=y": { "model": "block/stripped_acacia_wood" },
-        "axis=z": { "model": "block/stripped_acacia_wood", "x": 90 },
-        "axis=x": { "model": "block/stripped_acacia_wood", "x": 90, "y": 90 }
+        "axis=y":  { "model": "%MOD_ID%:block/stripped_%BLOCK%_wood" },
+        "axis=z":   { "model": "%MOD_ID%:block/stripped_%BLOCK%_wood", "x": 90 },
+        "axis=x":   { "model": "%MOD_ID%:block/stripped_%BLOCK%_wood", "x": 90, "y": 90 }
     }
 }
