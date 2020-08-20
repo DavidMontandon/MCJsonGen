@@ -21,7 +21,13 @@ class Generator:
                     os.mkdir(new_destination)
                 self.__crawl(new_source, new_destination)
             else:
-                new_destination = os.path.join(destination, self.__keywords["%BLOCK%"] + "_" + entry)
+
+                if "BLOCKNAME" in entry:
+                    entry = entry.replace("BLOCKNAME", self.__keywords["%BLOCK%"])
+                else :
+                    entry = self.__keywords["%BLOCK%"] + "_" + entry 
+
+                new_destination = os.path.join(destination, entry)
                 self.__writeFile(new_source, new_destination)
 
 

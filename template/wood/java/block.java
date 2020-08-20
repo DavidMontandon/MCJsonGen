@@ -3,6 +3,15 @@
 	public static final RegistryObject<Block> %BLOCK_UPPER%_LOG = BLOCKS.register("%BLOCK%_log",
 			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.DARK_OAK_LOG)));
 	
+	public static final RegistryObject<Block> STRIPPED_%BLOCK_UPPER%_LOG = BLOCKS.register("stripped_%BLOCK%_log",
+			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.DARK_OAK_LOG)));
+
+	public static final RegistryObject<Block> %BLOCK_UPPER%_WOOD = BLOCKS.register("%BLOCK%_wood",
+			() -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+
+	public static final RegistryObject<Block> STRIPPED_%BLOCK_UPPER%_WOOD = BLOCKS.register("stripped_%BLOCK%_wood",
+			() -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+
 	public static final RegistryObject<Block> %BLOCK_UPPER%_PLANKS = BLOCKS.register("%BLOCK%_planks",
 			() -> new Block(Block.Properties.from(Blocks.DARK_OAK_PLANKS)));
 
