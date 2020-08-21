@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "item/iron_shovel"
+        "layer0": "%MOD_ID%:item/%BLOCK%_shovel"
     }
 }

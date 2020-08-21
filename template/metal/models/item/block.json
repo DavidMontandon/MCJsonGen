@@ -1,3 +1,3 @@
 {
-    "parent": "block/iron_block"
+    "parent": "%MOD_ID%:block/%BLOCK%_block"
 }

@@ -1,3 +1,6 @@
 {
-	"parent":"%MOD_ID%:block/%BLOCK%_ore"
+	"parent" : "block/cube_all",
+	"textures" : {
+		"all":"%MOD_ID%:blocks/%BLOCK%_ore"
+	}
 }

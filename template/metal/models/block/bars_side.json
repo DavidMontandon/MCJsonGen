@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "block/iron_bars",
-        "bars": "block/iron_bars",
-        "edge": "block/iron_bars"
+        "particle": "%MOD_ID%:blocks/%BLOCK%_bars",
+        "bars": "%MOD_ID%:blocks/%BLOCK%_bars",
+        "edge": "%MOD_ID%:blocks/%BLOCK%_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],
