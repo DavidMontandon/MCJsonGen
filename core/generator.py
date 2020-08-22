@@ -1,14 +1,37 @@
-import os 
+import os, json, sys
 
 class Generator:
 
-    def __init__(self, source_path, destination_path, formated_keywords):
+    def __init__(self, source_root_path, template, destination_path, formated_keywords):
         self.__keywords = formated_keywords 
-        self.__source_path = source_path 
+        self.__source_root_path = source_root_path 
         self.__destination_path = destination_path 
+        self.__others = {}
+        self.__others[template] = True                
+
+        self.__source_template_path = os.path.join(source_root_path, template)  
+
+        if not os.path.exists(self.__source_template_path): 
+            print("Source path doesn't exists : " + self.__source_template_path)
+            sys.exit(2)
 
     def generate(self):
-        self.__crawl(self.__source_path, self.__destination_path)
+        config_file_name = os.path.join(self.__source_template_path, "config.json")
+        if os.path.isfile(config_file_name):
+            with open(config_file_name) as config_file:
+                data = json.load(config_file)
+                other_types = data["also_generate"]
+
+                for t in other_types:
+                    if not t in self.__others:
+                        self.__others[t] = True                
+                        new_path = os.path.join(self.__source_root_path, t)
+                        if not os.path.exists(self.__source_template_path): 
+                            print("Source path doesn't exists : " + self.__source_template_path)
+                        else:
+                            self.__crawl(new_path, self.__destination_path)
+
+        self.__crawl(self.__source_template_path, self.__destination_path)
 
     def __crawl(self, source, destination):
         list_of_entries = os.listdir(source)
@@ -21,13 +44,14 @@ class Generator:
                     os.mkdir(new_destination)
                 self.__crawl(new_source, new_destination)
             else:
-                if "BLOCKNAME" in entry:
-                    entry = entry.replace("BLOCKNAME", self.__keywords["%BLOCK%"])
-                else :
-                    entry = self.__keywords["%BLOCK%"] + "_" + entry 
+                if entry != "config.json":
+                    if "BLOCKNAME" in entry:
+                        entry = entry.replace("BLOCKNAME", self.__keywords["%BLOCK%"])
+                    else :
+                        entry = self.__keywords["%BLOCK%"] + "_" + entry 
 
-                new_destination = os.path.join(destination, entry)
-                self.__writeFile(new_source, new_destination)
+                    new_destination = os.path.join(destination, entry)
+                    self.__writeFile(new_source, new_destination)
 
     def __writeFile(self, source, destination):
         print("Reading : " + source)

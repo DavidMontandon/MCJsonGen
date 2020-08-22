@@ -51,11 +51,11 @@ def main(argv):
         else:
             formated_keywords["%" + k + "%"] = v
 
-    source_path = os.path.join(path, "template")
-    source_path = os.path.join(source_path, template)  
+    source_root_path = os.path.join(path, "template")
+    source_template_path = os.path.join(source_root_path, template)  
 
-    if not os.path.exists(source_path): 
-        print("Source path doesn't exists : " + source_path)
+    if not os.path.exists(source_template_path): 
+        print("Source path doesn't exists : " + source_template_path)
         sys.exit(2)
 
     destination_path = os.path.join(path, "gen")
@@ -70,8 +70,7 @@ def main(argv):
     if not os.path.exists(destination_path): 
          os.mkdir(destination_path)
 
-
-    generator.Generator(source_path, destination_path, formated_keywords).generate()
+    generator.Generator(source_root_path, template, destination_path, formated_keywords).generate()
 
 if __name__ == "__main__":
     main(sys.argv[1:])  
