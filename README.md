@@ -16,3 +16,26 @@
                             generation template (must be a folder in template folder), e.g. wood
 
 You can create your own templates directly inside the *template* folder.
+
+**config.json**
+Inside the root folder
+
+    {
+    "modid":"mymod",
+    "keywords" : {    
+    "JAVA_CLASS" : "MyMod"
+	    }
+    }
+
+ - modid : name of your modid (will be overwrite is -m is set in command line)
+ - keywords : custom keywords that can be used to replace in template, e.g. JAVA_CLASS will replace %_JAVA_CLASS% with the string MyMod (without double quotation marks).
+
+**config.json**
+Inside template folder
+If template folder contains a *config.json* file, it will be read to load more template.
+
+    {
+    "also_generate":["wood_extra"]
+    }
+
+e.g. "also_generate":["wood_extra"] will also generate json file inside the template folder "wood_extra"
