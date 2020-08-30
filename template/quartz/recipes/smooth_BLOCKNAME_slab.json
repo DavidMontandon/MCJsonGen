@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "%MOD_ID%:smooth_%BLOCK%"
+    }
+  },
+  "result": {
+    "item": "%MOD_ID%:smooth_%BLOCK%_slab",
+    "count": 6
+  }
+}

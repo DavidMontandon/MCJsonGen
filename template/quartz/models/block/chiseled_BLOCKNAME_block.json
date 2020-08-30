@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "side": "%MOD_ID%:block/chiseled_%BLOCK%_block",
+        "end": "%MOD_ID%:block/chiseled_%BLOCK%_block_top"
+    }
+}

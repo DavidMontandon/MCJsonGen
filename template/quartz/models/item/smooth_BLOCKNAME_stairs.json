@@ -1,0 +1,3 @@
+{
+    "parent": "%MOD_ID%:block/smooth_%BLOCK%_stairs"
+}

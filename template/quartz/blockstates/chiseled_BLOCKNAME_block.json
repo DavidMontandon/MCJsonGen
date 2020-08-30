@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "%MOD_ID%:block/chiseled_%BLOCK%_block" }
+    }
+}

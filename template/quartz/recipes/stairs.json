@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "%MOD_ID%:chiseled_%BLOCK%_block"
+      },
+      {
+        "item": "%MOD_ID%:%BLOCK%_block"
+      },
+      {
+        "item": "%MOD_ID%:%BLOCK%_pillar"
+      }
+    ]
+  },
+  "result": {
+    "item": "%MOD_ID%:%BLOCK%_stairs",
+    "count": 4
+  }
+}

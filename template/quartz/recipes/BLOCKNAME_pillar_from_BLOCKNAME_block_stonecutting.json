@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "%MOD_ID%:%BLOCK%_block"
+  },
+  "result": "%MOD_ID%:%BLOCK%_pillar",
+  "count": 1
+}

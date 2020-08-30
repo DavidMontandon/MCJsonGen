@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "%MOD_ID%:%BLOCK%_block"
+    }
+  },
+  "result": {
+    "item": "%MOD_ID%:%BLOCK%_pillar",
+    "count": 2
+  }
+}
