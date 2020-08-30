@@ -1,3 +1,4 @@
+
 # Generate Minecraft JSON Files
 
 **PYTHON 3 MUST BE INSTALLED ON YOUR COMPUTER**
@@ -17,6 +18,10 @@
 
 You can create your own templates directly inside the *template* folder.
 
+*%MODID%* in the file content will be replaced by your modid.
+*%BLOCK%* in the file content will be replaced by your blockname.
+*%BLOCKNAME%* in the filename will be replaced by your blockname.
+
 **config.json**
 Inside the root folder
 
@@ -28,7 +33,7 @@ Inside the root folder
     }
 
  - modid : name of your modid (will be overwrite is -m is set in command line)
- - keywords : custom keywords that can be used to replace in template, e.g. JAVA_CLASS will replace %_JAVA_CLASS% with the string MyMod (without double quotation marks).
+ - keywords : custom keywords that can be used to replace in template, e.g. JAVA_CLASS will replace %JAVA_CLASS% with the string MyMod (without double quotation marks).
 
 **config.json**
 Inside template folder
