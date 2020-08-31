@@ -38,6 +38,7 @@ def main(argv):
     formated_keywords = {}
     formated_keywords["%BLOCK_UPPER%"] = block_name.upper()
     formated_keywords["%BLOCK_LOWER%"] = block_name.lower()
+    formated_keywords["%BLOCK_COMMON_NAME%"] = block_name.title().replace("_", " ") 
     formated_keywords["%BLOCK%"] = block_name
     formated_keywords["%MOD_ID%"] = mod_ID
 

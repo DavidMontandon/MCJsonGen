@@ -1,0 +1,6 @@
+	"block.%MOD_ID%.%BLOCK%_block" : "%BLOCK_COMMON_NAME% Block",
+	"block.%MOD_ID%.chiseled_%BLOCK%_block" : "Chiseled %BLOCK_COMMON_NAME% Block",
+	"block.%MOD_ID%.%BLOCK%_pillar" : "%BLOCK_COMMON_NAME% Pillar",
+	"block.%MOD_ID%.%BLOCK%_stairs" : "%BLOCK_COMMON_NAME% Stairs",
+	"block.%MOD_ID%.smooth_%BLOCK%" : "Smooth %BLOCK_COMMON_NAME% Block",
+	"block.%MOD_ID%.smooth_%BLOCK%_stairs" : "Smooth %BLOCK_COMMON_NAME% Stairs",
