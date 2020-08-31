@@ -4,3 +4,5 @@
 	"block.%MOD_ID%.%BLOCK%_stairs" : "%BLOCK_COMMON_NAME% Stairs",
 	"block.%MOD_ID%.smooth_%BLOCK%" : "Smooth %BLOCK_COMMON_NAME% Block",
 	"block.%MOD_ID%.smooth_%BLOCK%_stairs" : "Smooth %BLOCK_COMMON_NAME% Stairs",
+	"block.%MOD_ID%.%BLOCK%_slab" : "%BLOCK_COMMON_NAME% Slab",
+	"block.%MOD_ID%.smooth_%BLOCK%_slab" : "Smooth %BLOCK_COMMON_NAME% Slab",
